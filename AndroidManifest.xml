@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ir.MyCompleteProject"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/ActionBarStyle"
+        android:supportsRtl="true">
+
+
+        
+        
+        
+        <activity
+            android:name=".TabsSwipeGestureMainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="ir.MyCompleteProject.ActionBarMainActivity" >
+                       
+            
+
+<!--             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        
+        
+        <activity
+            android:name=".SlidingMenuMainActivity"
+            android:label="@string/app_name"
+            
+            >
+            <!-- android:parentActivityName="ir.MyCompleteProject.ActionBarMainActivity" > -->
+
+<!--             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        
+        
+        <activity
+            android:name=".ActionBarMainActivity"
+            android:label="@string/app_name">
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".ActionBarSearchResultsActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+
+        <!-- Search results activity -->
+        <activity android:name=".ActionBarSearchResultsActivity"
+            android:label="@string/action_search"
+            android:parentActivityName="ir.MyCompleteProject.ActionBarMainActivity" >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        
+        
+
+        <!-- Location found activity -->
+        <activity
+            android:name=".ActionBarLocationFound"
+            android:label="@string/activity_location_found"
+            android:parentActivityName="ir.MyCompleteProject.ActionBarMainActivity" >
+            
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" />
+        </activity>
+        
+        
+
+        
+            
+                
+    </application>
+
+</manifest>
